@@ -14,7 +14,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import ValidationError
 
 from model_utils.managers import InheritanceManager
-from reversion import revisions as reversion
 
 from symposion.markdown_parser import parse
 from symposion.conference.models import Section
@@ -173,7 +172,6 @@ class ProposalBase(models.Model):
     def __str__(self):
         return self.title
 
-reversion.register(ProposalBase)
 
 
 @python_2_unicode_compatible

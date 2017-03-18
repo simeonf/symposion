@@ -8,8 +8,6 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.auth.models import Permission, User
 
-from reversion import revisions as reversion
-
 
 TEAM_ACCESS_CHOICES = [
     ("open", _("open")),
@@ -92,5 +90,3 @@ class Membership(models.Model):
     class Meta:
         verbose_name = _("Membership")
         verbose_name_plural = _("Memberships")
-
-reversion.register(Membership)
